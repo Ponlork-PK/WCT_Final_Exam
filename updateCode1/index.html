@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Attributes Demo</title>
+</head>
+<body>
+    <h1>ARIA Attribute Proof</h1>
+    <div id="Example" role="alert" aria-live="assertive" aria-label="Important Alert">
+        This is dynamic alert area
+    </div>
+
+    <button id="updateAlert">Trigger Alert</button>
+
+    <script>
+
+        const alertDiv = document.getElementById('Example');
+        const button = document.getElementById('UpdateAlert');
+        
+        button.addEventListener('click', () => {
+            // Simulate an asynchronous API call
+            setTimeout(() => {
+                updateAlert();
+            }, 2000);
+            alertDiv.textContent = 'Update to full name: Rous Ponlork';
+            alert('Update to full name: Rous Ponlork');
+        });
+    
+    </script>
+</body>
+</html>
