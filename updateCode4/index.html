@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+
+    <script>
+
+        function CreateCounter(){
+            let Count = 0;
+            return function(){
+                
+                console.log('Student Name: Rous Ponlork');
+
+                Count++;
+                return Count;
+            }
+        }
+        
+        const counter = CreateCounter();
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+        // Create another instance of the counter
+        const anotherCounter = CreateCounter();
+        console.log(anotherCounter());
+        console.log(anotherCounter());
+
+    </script>
+</body>
+</html>
